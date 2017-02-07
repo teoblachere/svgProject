@@ -3,20 +3,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 750 500" xmlns:xlink="http://www.w3.org/1999/xlink" >
 
     <def>
+        <g id="k2">
+            <path d="M0 290 L80 235 L100 230 L175 320 L0 400" fill="white"/>
 
+            <path d="M250 340 L285 300 L300 275 L340 245 L365 235 L375 210 L415 175 L425 170 L465 130 L500 100 L600 500 Z" fill="lightsteelblue"/>
+            <path d="M205 310 L245 310 L330 335 L360 370 L420 280 L430 280 L463 220 L460 225 L450 225 L500 160 L505 130 L500 100 L520 105 L570 145 L590 170 L675 190 L730 230 L765 240 L816 300 L900 375 L900 600 L0 600 Z" fill="aliceblue" />
+            <path d="M675 190 L665 255 L660 315 l680 315 L730 420 L900 600 L900 590 L630 400 L620 370 L630 355 L600 330 L590 335 L600 350 L580 380 L620 415 L690 600 L 350 600 L350 500 L375 455 L400 400 L420 380 L420 360 L445 340 L500 300 L500 345 L540 220 L575 290 L585 285 L575 230 L590 220 L590 210 L600 210 L570 190 L595 175 L615 200 Z" fill="rgb(229, 237, 249)" />
+
+            <path d="M0 340 L70 330 L120 300 L170 300 L190 280 L275 450 L310 475 L400 550 L0 560 Z" fill="ghostwhite" />
+            <path d="M0 410 L45 400 L80 430 L130 450 L170 410 L200 445 L220 435 L240 475 L270 460 L310 490 L320 480 L400 550 L0 560 Z" fill="gainsboro" />
+        </g>
     </def>
 
-    <rect x="0" y="0" width="900" height="600" style="fill:navy;" />
+    <linearGradient  id="GradSky" gradientUnits="userSpaceOnUse"
+     x1="450" y1="0" x2="450" y2="600">
 
-    <g id="k2">
-        <path d="M0 290 L80 235 L100 230 L175 320 L0 400" fill="white"/>
+    <stop offset="0" style="stop-color:midnightblue"/>
 
-        <path d="M250 340 L285 300 L300 275 L340 245 L365 235 L375 210 L415 175 L425 170 L465 130 L500 100 L600 500 Z" fill="lightsteelblue"/>
-        <path d="M205 310 L245 310 L330 335 L360 370 L420 280 L430 280 L463 220 L460 225 L450 225 L500 160 L505 130 L500 100 L520 105 L570 145 L590 170 L675 190 L730 230 L765 240 L816 300 L900 375 L900 600 L0 600 Z" fill="aliceblue" />
-        <path d="M675 190 L665 255 L660 315 l680 315 L730 420 L900 600 L900 590 L630 400 L620 370 L630 355 L600 330 L590 335 L600 350 L580 380 L620 415 L690 600 L 350 600 L350 500 L375 455 L400 400 L420 380 L420 360 L445 340 L500 300 L500 345 L540 220 L575 290 L585 285 L575 230 L590 220 L590 210 L600 210 L570 190 L595 175 L615 200 Z" fill="rgb(229, 237, 249)" />
+    <stop offset="0.2" style="stop-color:royalblue"/>
 
-        <path d="M0 340 L70 330 L120 300 L170 300 L190 280 L275 450 L310 475 L400 550 L0 560 Z" fill="ghostwhite" />
-        <path d="M0 410 L45 400 L80 430 L130 450 L170 410 L200 445 L220 435 L240 475 L270 460 L310 490 L320 480 L400 550 L0 560 Z" fill="gainsboro" />
-    </g>
+    <stop offset="0.65" style="stop-color:lightskyblue"/>
+
+    </linearGradient>
+
+    <rect x="0.0" y="0.0" height="600" width="900" fill="url(#GradSky)" />
+
+    <use xlink:href="#k2" />
 
 </svg>
