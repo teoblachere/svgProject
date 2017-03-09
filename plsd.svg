@@ -13,49 +13,146 @@
             <path d="M-20 340 L70 330 L120 300 L170 300 L190 280 L275 450 L310 475 L400 550 L-20 560 Z" fill="ghostwhite" />
             <path d="M-10 410 L45 400 L80 430 L130 450 L170 410 L200 445 L220 435 L240 475 L270 460 L310 490 L320 480 L500 620 L-10 620 Z" fill="gainsboro" />
         </g>
+        <radialGradient  id="leafGrad" cx="45%" cy="10%" r="70%" fx="50%" fy="60%">
 
-        <g id="closeUpBackground">
+            <stop offset="0%" style="stop-color:black;stop-opacity:1"/>
 
-        </g>
+            <stop offset="55%" style="stop-color:darkgreen;stop-opacity:1"/>
 
-    </def>
+            <stop offset="75%" style="stop-color:lightgreen;stop-opacity:1"/>
 
-    <linearGradient  id="GradSky" gradientUnits="userSpaceOnUse"
-     x1="450" y1="0" x2="450" y2="600">
+            <stop offset="90%" style="stop-color:White;stop-opacity:1"/>
 
-        <stop offset="0" style="stop-color:midnightblue"/>
+        </radialGradient>
 
-        <stop offset="0.2" style="stop-color:royalblue"/>
+        <linearGradient  id="trunkGrad" gradientUnits="userSpaceOnUse"
+            x1="0" y1="0" x2="0" y2="70">
 
-        <stop offset="0.65" style="stop-color:lightskyblue"/>
+            <stop offset="0" style="stop-color:black"/>
 
-    </linearGradient>
+            <stop offset="0.8" style="stop-color:black"/>
 
-    <rect x="-10" y="-10" height="620" width="2500" fill="url(#GradSky)" />
+            <stop offset="0.95" style="stop-color:brown"/>
 
-    <use xlink:href="#k2" />
+            <stop offset="1" style="stop-color:sienna"/>
 
-    <linearGradient  id="gradAvalanche" gradientUnits="userSpaceOnUse"
-     x1="850" y1="110" x2="1100" y2="720">
+        </linearGradient>
 
-        <stop offset="0" style="stop-color:lavender"/>
+        <g id="leafRow">
+            <path d="M 0 0
+                Q 9 10 20 10
+                Q 17 12 13 12
+                Q 16 15 18 15
+                Q 9 15 8 14
+                Q 7 14 12 19
+                Q 2 18 2 15
+                Q 2 21 1 22
+                Q -3 18 -4 15
+                Q -5 18 -10 21
+                Q -7 18 -8 14
+                Q -11 19 -16 17
+                Q -11 15 -12 14
+                Q -16 14 -20 12
+                Q -10 10 0 0"
+                fill="url(#leafGrad)" />
+            </g>
 
-        <stop id="snow1" offset="0" style="stop-color:gainsboro"/>
+            <g id="tree">
+                <path d="M 0 0 L5 70 Q 0 72 -5 70 Z" fill="url(#trunkGrad)" />
+                <use xlink:href="#leafRow" transform="translate(0, 38) scale(1.15, 1.2)"/>
+                <use xlink:href="#leafRow" transform="translate(0, 30) scale(1, 1.1)"/>
+                <use xlink:href="#leafRow" transform="translate(0, 23) scale(0.9, 1)"/>
+                <use xlink:href="#leafRow" transform="translate(0, 15) scale(0.75, 0.95)"/>
+                <use xlink:href="#leafRow" transform="translate(0, 9) scale(0.6, 0.85)"/>
+                <use xlink:href="#leafRow" transform="translate(0, 3) scale(0.4, 0.75)"/>
+                <use xlink:href="#leafRow" transform="translate(0, 0) scale(0.3, 0.6)"/>
+            </g>
 
-        <stop id="snow2" offset="0" style="stop-color:aliceblue"/>
+        </def>
 
-    </linearGradient>
+        <linearGradient  id="GradSky" gradientUnits="userSpaceOnUse"
+            x1="450" y1="0" x2="450" y2="600">
 
-    <path d="M675 190 L665 255 L660 315 L680 315 L730 420 L920 620 L920 620 L1200 620 L920 375 L816 300 L765 240 L730 230" fill="url(#gradAvalanche)" />
+            <stop offset="0" style="stop-color:midnightblue"/>
 
-    <animate id="shake" attributeName="viewBox" dur="2s" begin="3s" values="0 0 900 600; -10 0 900 600; 0 -10 900 600;  0 0 900 600; 0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600; -10 0 900 600; 0 -10 900 600;  0 0 900 600;  0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600; -10 0 900 600; 0 -10 900 600;  0 0 900 600;  0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600; -10 0 900 600; 0 -10 900 600;  0 0 900 600;  0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600; 0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600; -10 0 900 600; 0 -10 900 600;  0 0 900 600;  0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600; -10 0 900 600; 0 -10 900 600;  0 0 900 600;  0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600; -10 0 900 600; 0 -10 900 600;  0 0 900 600;  0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600;" fill="freeze"/>
+            <stop offset="0.2" style="stop-color:royalblue"/>
 
-    <animate id="panToAvalanche" attributeName="viewBox" dur="1s" begin="shake.end" values="0 0 900 600; 400 0 900 600;" fill="freeze"/>
+            <stop offset="0.65" style="stop-color:lightskyblue"/>
 
-    <animate id="avalanche" begin="panToAvalanche.end" attributeType= "XML" xlink:href="#snow1" attributeName="offset" from="0" to="1" fill="freeze" dur="7s"/>
-    <animate attributeType="XML" begin="panToAvalanche.end" xlink:href="#snow2" attributeName="offset" from="0.1" to="1.1" fill="freeze" dur="7s"/>
-    <animate id="milkShake" attributeName="viewBox" dur="5s" begin="panToAvalanche.end" values="400 0 900 600; 395 0 900 600; 400 -5 900 600; 400 0 900 600; 400 5 900 600;  405 5 900 600;  405 0 900 600; 400 0 900 600; 395 0 900 600; 400 -5 900 600; 400 0 900 600; 400 5 900 600;  405 5 900 600;  405 0 900 600; 400 0 900 600; 395 0 900 600; 400 -5 900 600; 400 0 900 600; 400 5 900 600;  405 5 900 600;  405 0 900 600; 400 0 900 600; 395 0 900 600; 400 -5 900 600; 400 0 900 600; 400 5 900 600;  405 5 900 600;  405 0 900 600; 400 0 900 600; 400 5 900 600; 405 5 900 600;  405 0 900 600; 400 0 900 600; 395 0 900 600; 400 -5 900 600; 400 0 900 600; 400 5 900 600;  405 5 900 600;  405 0 900 600; 400 0 900 600; 395 0 900 600; 400 -5 900 600; 400 0 900 600; 400 5 900 600;  405 5 900 600;  405 0 900 600;  400 0 900 600; 395 0 900 600; 400 -5 900 600;  400 0 900 600;  400 5 900 600;  405 5 900 600;  405 0 900 600;  400 0 900 600;" fill="freeze"/>
+        </linearGradient>
 
-    <animate id="" attributeName="viewBox" dur="0.2s" begin="avalanche.end" values="400 0 900 600; 1200 0 900 600;" fill="freeze"/>
+        <rect x="-10" y="-10" height="620" width="3000" fill="url(#GradSky)" />
 
-</svg>
+        <use xlink:href="#k2" />
+
+        <linearGradient  id="gradAvalanche" gradientUnits="userSpaceOnUse"
+            x1="850" y1="110" x2="1100" y2="720">
+
+            <stop offset="0" style="stop-color:lavender"/>
+
+            <stop id="snow1" offset="0" style="stop-color:gainsboro"/>
+
+            <stop id="snow2" offset="0" style="stop-color:aliceblue"/>
+
+        </linearGradient>
+
+        <path d="M675 190 L665 255 L660 315 L680 315 L730 420 L920 620 L920 620 L1200 620 L920 375 L816 300 L765 240 L730 230" fill="url(#gradAvalanche)" />
+
+        <linearGradient  id="gradFade" gradientUnits="userSpaceOnUse"
+            x1="1350" y1="300" x2="1600" y2="300">
+
+            <stop offset="0" style="stop-color:lavender;stop-opacity:0"/>
+
+            <stop offset="0.9" style="stop-color:honeydew;stop-opacity:1" />
+
+        </linearGradient>
+
+        <rect x="1350" y="0" width="250" height="600" fill="url(#gradFade)" />
+
+        <use xlink:href="#closeUpBackground" transform="translate(1600, 0)" />
+
+        <animate id="shake" attributeName="viewBox" dur="2s" begin="3s" values="0 0 900 600; -10 0 900 600; 0 -10 900 600;  0 0 900 600; 0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600; -10 0 900 600; 0 -10 900 600;  0 0 900 600;  0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600; -10 0 900 600; 0 -10 900 600;  0 0 900 600;  0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600; -10 0 900 600; 0 -10 900 600;  0 0 900 600;  0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600; 0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600; -10 0 900 600; 0 -10 900 600;  0 0 900 600;  0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600; -10 0 900 600; 0 -10 900 600;  0 0 900 600;  0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600; -10 0 900 600; 0 -10 900 600;  0 0 900 600;  0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600;" fill="freeze"/>
+
+        <animate id="panToAvalanche" attributeName="viewBox" dur="1s" begin="shake.end" values="0 0 900 600; 400 0 900 600;" fill="freeze"/>
+
+        <animate id="avalanche" begin="panToAvalanche.end" attributeType= "XML" xlink:href="#snow1" attributeName="offset" from="0" to="1" fill="freeze" dur="7s"/>
+        <animate attributeType="XML" begin="panToAvalanche.end" xlink:href="#snow2" attributeName="offset" from="0.1" to="1.1" fill="freeze" dur="7s"/>
+        <animate id="milkShake" attributeName="viewBox" dur="5s" begin="panToAvalanche.end" values="400 0 900 600; 395 0 900 600; 400 -5 900 600; 400 0 900 600; 400 5 900 600;  405 5 900 600;  405 0 900 600; 400 0 900 600; 395 0 900 600; 400 -5 900 600; 400 0 900 600; 400 5 900 600;  405 5 900 600;  405 0 900 600; 400 0 900 600; 395 0 900 600; 400 -5 900 600; 400 0 900 600; 400 5 900 600;  405 5 900 600;  405 0 900 600; 400 0 900 600; 395 0 900 600; 400 -5 900 600; 400 0 900 600; 400 5 900 600;  405 5 900 600;  405 0 900 600; 400 0 900 600; 400 5 900 600; 405 5 900 600;  405 0 900 600; 400 0 900 600; 395 0 900 600; 400 -5 900 600; 400 0 900 600; 400 5 900 600;  405 5 900 600;  405 0 900 600; 400 0 900 600; 395 0 900 600; 400 -5 900 600; 400 0 900 600; 400 5 900 600;  405 5 900 600;  405 0 900 600;  400 0 900 600; 395 0 900 600; 400 -5 900 600;  400 0 900 600;  400 5 900 600;  405 5 900 600;  405 0 900 600;  400 0 900 600;" fill="freeze"/>
+
+        <animate id="switchView" attributeName="viewBox" dur="0.2s" begin="avalanche.end" values="400 0 900 600; 1600 0 900 600;" fill="freeze"/>
+
+        <!-- Close Up -->
+
+        <path d="M 1600 0 Q 1850 400 2500 350 L 2500 600 L 1600 600 Z" fill="honeydew" />
+
+        <linearGradient  id="avalancheCloseUp" gradientUnits="userSpaceOnUse"
+            x1="1600" y1="0" x2="2450" y2="350">
+
+            <stop offset="0" style="stop-color:white"/>
+            <stop id="snowEdge" offset="0" style="stop-color:white"/>
+            <stop id="snowFade" offset="0.1" style="stop-color:white;stop-opacity:0"/>
+
+        </linearGradient>
+
+        <path d="M 1600 0 L 1615 0 Q 1900 395 2400 300 L 2520 600 L 1600 600 Z" fill="url(#avalancheCloseUp)" />
+
+        <path id="snowRoll" d="M 0 0 Q 30 0 30 30 L -50 600 L -60 600 Z" fill="white" visibility="hidden">
+            <animateMotion path="M 1614 0 Q 1900 395 2400 300" begin="switchView.end" dur="1.93s" rotate="auto" />
+        </path>
+
+        <use xlink:href="#tree" transform="translate(2450, 70) scale(3)" />
+        <use xlink:href="#tree" transform="translate(2370, 80) scale(3.5)" />
+        <use xlink:href="#tree" transform="translate(2400, 100) scale(4.0)" />
+        <use xlink:href="#tree" transform="translate(2330, 90) scale(3.5)" />
+        <use xlink:href="#tree" transform="translate(2500, 90) scale(3.8)" />
+        <use xlink:href="#tree" transform="translate(2290, 105) scale(4.3)" />
+        <use xlink:href="#tree" transform="translate(2450, 110) scale(5)" />
+        <use xlink:href="#tree" transform="translate(2370, 120) scale(5.5)" />
+        <use xlink:href="#tree" transform="translate(2460, 135) scale(6)" />
+
+        <animate begin="switchView.end" attributeType= "XML" xlink:href="#snowRoll" attributeName="visibility" from="hidden" to="visible" fill="freeze" dur="0.01s"/>
+        <animate begin="switchView.end" attributeType= "XML" xlink:href="#snowEdge" attributeName="offset" from="0" to="0.99" fill="freeze" dur="2s"/>
+        <animate begin="switchView.end" attributeType= "XML" xlink:href="#snowFade" attributeName="offset" from="0.01" to="1" fill="freeze" dur="2s"/>
+        <animate begin="switchView.end" attributeType= "XML" xlink:href="#avalancheCloseUp" attributeName="y2" from="350" to="0" fill="freeze" dur="2s"/>
+
+    </svg>
