@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/css" href="handson.css" ?>
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600" xmlns:xlink="http://www.w3.org/1999/xlink" >
 
-    <def>
+    <defs>
         <g id="k2">
             <path d="M-10 290 L80 235 L100 230 L175 320 L-10 400" fill="white"/>
 
@@ -68,7 +68,7 @@
                 <use xlink:href="#leafRow" transform="translate(0, 0) scale(0.3, 0.6)"/>
             </g>
 
-        </def>
+        </defs>
 
         <linearGradient  id="GradSky" gradientUnits="userSpaceOnUse"
             x1="450" y1="0" x2="450" y2="600">
