@@ -3,69 +3,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600" xmlns:xlink="http://www.w3.org/1999/xlink" >
 
     <defs>
-        <linearGradient  id="windowGrad" gradientUnits="userSpaceOnUse"
-            x1="220" y1="60" x2="280" y2="40">
-
-            <stop offset="0" style="stop-color:#66ccff;stop-opacity:0.1"/>
-            <stop offset="1" style="stop-color:#66ccff;stop-opacity:0.3"/>
-
-        </linearGradient>
-
-        <linearGradient  id="gradRed" gradientUnits="userSpaceOnUse"
-            x1="0" y1="0" x2="0" y2="100">
-
-            <stop offset="0" style="stop-color:#ff8989"/>
-            <stop offset="0.7" style="stop-color:red"/>
-            <stop offset="1" style="stop-color:black"/>
-
-        </linearGradient>
-
-        <linearGradient  id="gradYellow" gradientUnits="userSpaceOnUse"
-            x1="10" y1="50" x2="10" y2="120">
-
-            <stop offset="0.6" style="stop-color:yellow"/>
-            <stop offset="1" style="stop-color:black"/>
-
-        </linearGradient>
-
-        <g id="rearRotor">
-            <polygon points="-5 -20 5 20 -5 20 5 -20" color="black">
-                <animateTransform begin="0" attributeName="transform" type="rotate" values="0; 360" dur="0.3s" repeatCount="indefinite"/>
-            </polygon>
-        </g>
-
-        <g id="topRotors">
-            <polygon fill="black" points="100 12 110 10 200 15 195 15 ">
-                <animate attributeName="points" dur="0.4s" values="100 12 110 10 200 15 195 15; 290 10 300 12 200 15 195 15; 100 12 110 10 200 15 195 15 " repeatCount="indefinite"/>
-            </polygon>
-
-            <polygon fill="black" points="290 15 300 17 200 20 195 20">
-                <animate begin="0.01" attributeName="points" dur="0.4s" values="290 10 300 12 200 15 195 15; 100 12 110 10 200 15 195 15; 290 10 300 12 200 15 195 15 " repeatCount="indefinite"/>
-            </polygon>
-        </g>
-
-        <g id="chopper">
-
-            <use xlink:href="#rearRotor" transform="translate(63 38)"/>
-            <use xlink:href="#rearRotor" transform="translate(63 38)"/>
-            <rect fill="black" x="195" y="15" width="5" height="5" />
-            <use xlink:href="#topRotors" />
-
-            <!-- <path d="M 31 5 h 16 0 l 75 31" stroke="red" stroke-width="2" fill="none" /> -->
-            <path d="M 31 5 H 47 L 77 31 H 134 Q 182 15 230 22 Q 231 23 233 26 Q 252 29 257 37 L 266 38 L269 40 L225 40 L250 62 L300 62 L 304 65 V 72 Q 284 88 263 87 H 188 Q 172 83 136 43 H 77 L 73 55 H 59 Z" stroke-width="2" fill="url(#gradRed)" />
-            <path d="M 197 84 h 2 V 102 H 182 V 104 H 274 L 283 101 L 278 101 L 275 102 L 262 102 L 256 84 h 2 L 264 102 H 197" fill="url(#gradYellow)" />
-            <path d="M 185 40 h 7 v 10 h 10 v 7 h -10 v 10 h -7 v -10 h -10 v -7 h 10 v -10" fill="white" />
-
-            <!-- JMV -->
-
-            <!-- windows -->
-            <path d="M 269 40 L300 62 L250 62 L225 40 Z " fill="url(#windowGrad)" />
-
+        <g id="bgMountains">
+            <path d="M0 250 L 40 240 L 50 235 L 60 220 L 70 230 L 90 220 L 120 210 L 140 200 L 165 215 L180 217 L 190 208 L 230 224 L 250 220 L 270 200 L 300 225 L 350 210 L 380 240 L 430 250 L 480 240 L 540 220 L 550 200 L 600 215 L 625 225 L 650 210 L 700 200 L 725 205 L 760 240 L 800 200 L 830 215 L 850 210 L 875 230 L 900 250 L 900 600 L 0 600 Z" fill="grey"/>
         </g>
     </defs>
 
-    <rect x="0" y="0" width="900" height="600" fill="gray" />
-
-    <use xlink:href="#chopper" />
+    <rect x="0" y="0" width="900" height="600" fill="blue" />
+    <use xlink:href="#bgMountains"/>
 
 </svg>
