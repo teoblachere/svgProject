@@ -4,8 +4,8 @@
 
     <defs>
         <g id="speechBubble" >
-            <ellipse cx="0" cy="0" rx="100" ry="70" fill="white" stroke="black" />
-            <path d="M-50 60 Q -60 75 -75 75 Q -65 75 -60 55.3" fill="white" stroke="black" />
+            <ellipse cx="0" cy="0" rx="100" ry="70" fill="white" stroke="black" stroke-width="2" />
+            <path d="M-50 60 Q -60 75 -75 75 Q -65 75 -60 55.3" fill="white" stroke="black" stroke-width="2" />
         </g>
 
         <g id="k2">
@@ -87,7 +87,7 @@
             </radialGradient>
 
             <g id="sun">
-                <circle cx="0" cy="0" r="20" fill="url(#gradSun)"/>
+                <circle cx="0" cy="0" r="50" fill="url(#gradSun)"/>
             </g>
 
             <!-- MR Poopy Butthole -->
@@ -158,103 +158,327 @@
                 <use xlink:href="#mpbhLeg" transform="translate(20, 20) rotate(-35) scale(-0.8, 0.8)"/>
             </g>
 
-        </defs>
+            <g id="showMe">
+                <!-- SHOW ME WHAT YOU GOT! -->
+                <path d="M 240,5 Q 271,10 292,20 Q 330,38 347,52 Q 365,62 377,75 Q 411,88 426,104 Q 422,99 431,112 Q 460,290 446,400 C 415,466 415,476 410,544 L 399,597 Q 329,645 212,615 C 162,578 123,462 76,405 Q 56,368 48,326 Q 42,310 44,297 C 47,156 40,178 94,100 C 140,20 155,25 200,8 Q 222,4 240,5 Z" stroke="black" fill="#e5c74c" stroke-width="2"/>
 
-        <linearGradient  id="GradSky" gradientUnits="userSpaceOnUse"
-            x1="450" y1="0" x2="450" y2="600">
+                <!-- eyes -->
+                <circle cx="232" cy="197" r="57" fill="#E0EDFF" stroke="black" stroke-width="1" />
+                <circle cx="380" cy="196" r="55" fill="#E0EDFF" stroke="black" stroke-width="1" />
 
-            <stop offset="0" style="stop-color:midnightblue"/>
+                <!-- pupils right -->
+                <g transform="translate(10,-3)">
+                    <path d="M 228,191 L 229,191 L 230,191 L 232,191 L 235,193 L 235,196 L 234,199 L 232,201 L 229,201 L 226,199 L 225,197 L 225,195 L 225,195 Z" fill="#3a0fb9"/>
+                </g>
 
-            <stop offset="0.2" style="stop-color:royalblue"/>
+                <!-- pupils left -->
+                <g transform="translate(160,-3)">
+                    <path d="M 228,191 L 229,191 L 230,191 L 232,191 L 235,193 L 235,196 L 234,199 L 232,201 L 229,201 L 226,199 L 225,197 L 225,195 L 225,195 Z" fill="#3a0fb9"/>
+                </g>
 
-            <stop offset="0.65" style="stop-color:lightskyblue"/>
+                <!-- eyebrows'wrinkles -->
+                <path d="M 162,130 Q 204,135 230,132 C 290,130 298,160 431,123" fill="#f5a33f" stroke="none"/>
+
+
+                <!-- eyebrows -->
+                <path d="M 138,138 Q 192,102 308,115 Q 335,115 377,107 Q 429,100 446,115 C 455,130 440,125 439,126 Q 395,121 356,132 C 310,140 262,128 254,129 Q 212,125 148,151 C 140,155 132,144 138,138 Z" fill="#e1d969" stroke="black" />
+
+                <!-- linear gradient -->
+                <linearGradient id="gradientWrinkles" x1="50%" y1="50%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#f5a33f" />
+                    <stop offset="80%" stop-color="#f5a33f" />
+                </linearGradient>
+
+                <!-- wrinkles's shadow -->
+                <!-- first -->
+                <path d="M 215,50 Q 250,30 316,50 Z" fill="url(#gradientWrinkles)" stroke="none"/>
+                <!-- second -->
+                <path d="M 193,78 Q 287,58 347,78 Z" fill="url(#gradientWrinkles)" stroke="none"/>
+
+                <!-- wrinkles -->
+                <path d="M 157,62 C 261,31 328,55 345,52" fill="transparent" stroke="#ad5000"/>
+                <path d="M 150,91 C 252,54 345,88 375,75" fill="transparent" stroke="#ad5000"/>
+
+                <!-- mouth -->
+                <path d="M205 400 C 330 370, 339 370, 408 393" stroke="black" fill="transparent"/>
+
+                <!-- mouth's wrinkles -->
+                <!-- right -->
+                <path d="M 206,377 Q 160,410 218,418" fill="transparent" stroke="#ad5000"/>
+                <!-- left -->
+                <path d="M 405,373 Q 445,405 395,410" fill="transparent" stroke="#ad5000"/>
+
+                <!-- nose -->
+                <path d="M302 227 C343,346 369,324 266 331" stroke="black" fill="transparent" />
+            </g>
+
+            <g id="tooth">
+                <path d="M 41,37 C 40,53 60,53 59,37 Z" fill="white" stroke="black" stroke-width="0.33"/>
+            </g>
+
+            <g id="teeth-up">
+                <!-- centre -->
+                <use xlink:href="#tooth" transform="translate(-4.5,2)"/>
+                <!-- centre-gauche -->
+                <use xlink:href="#tooth" transform="translate(-21.9, 6.8) rotate(-3) scale(0.95,0.95)"/>
+                <!-- gauche -->
+                <use xlink:href="#tooth" transform="translate(-39.5, 15.4) rotate(-9) scale(0.90,0.90)"/>
+                <!-- centre-droite -->
+                <use xlink:href="#tooth" transform="translate(20.7, -0.5) rotate(7) scale(0.95,0.95)"/>
+                <!-- droite -->
+                <use xlink:href="#tooth" transform="translate(44.2, 0.7) rotate(13) scale(0.90,0.90)"/>
+            </g>
+
+            <g id="teeth-bottom">
+                <!-- centre-droit -->
+                <use xlink:href="#tooth" transform="translate(-0.6,0.8) rotate(8) scale(0.85,0.85)"/>
+                <!-- centre-gauche -->
+                <use xlink:href="#tooth" transform="translate(5.8,13) rotate(-8.5) scale(0.85,0.85)"/>
+                <!-- gauche -->
+                <use xlink:href="#tooth" transform="translate(14, 19) rotate(-21) scale(0.90,0.90)"/>
+                <!-- droite -->
+                <use xlink:href="#tooth" transform="translate(-8.5, -13) rotate(21) scale(0.90,0.90)"/>
+                <!-- extrême-gauche -->
+                <use xlink:href="#tooth" transform="translate(42.5, 7.5) rotate(-7.3) scale(0.75,0.75)"/>
+                <!-- extrême-droite -->
+                <use xlink:href="#tooth" transform="translate(-27.3, -2) rotate(7.3) scale(0.75,0.75)"/>
+            </g>
+
+            <g id="showMeMouth">
+                <!-- wrinkles -->
+                <!-- right -->
+                <path d="M 68,122 C 130,140 145,55 76,40.5" style="fill:#e5c74c;stroke:#ad5000;stroke-width:1" transform="scale(1.2,1.2) translate(-12,-12.5)"/>
+                <!-- left -->
+                <path d="M 10,39 04,40 C -65,55 -50,140 12,122" style="fill:#e5c74c;stroke:#ad5000;stroke-width:1" transform="scale(1.2,1.2) translate(-4.5,-12.5)"/>
+
+                <!-- mouth -->
+                <path d="M 12,122 Q 40,108 68,122 C 130,140 145,55 76,42 Q 40,35 04,42 C -65,55 -50,140 12,122 Z" style="fill:#6e0000;stroke:black;stroke-width:0.33"/>
+
+                <!-- teeth-up -->
+                <!--
+                <use xlink:href="#teeth-up" transform="translate(-5,0.6) rotate(-1.2)"/>
+            -->
+            <!-- teeth-bottom -->
+            <!--<use xlink:href="#teeth-bottom" transform="translate(85,154) rotate(180)"/>-->
+
+            <!-- tongue -->
+            <path d="M -23,120 Q -10,80 40,80 C 50,80 40,70 30,70 Q -5,70 -35,110 Z" fill="#c62946" stroke="none"/>
+
+            <!-- mouth's borders -->
+            <path d="M 12,122 Q 40,108 68,122 C 130,140 145,55 76,42 Q 40,35 04,42 C -65,55 -50,140 12,122 Z" style="fill:transparent;stroke:black;stroke-width:1"/>
+
+        </g>
+
+        <linearGradient  id="windowGrad" gradientUnits="userSpaceOnUse"
+            x1="220" y1="60" x2="280" y2="40">
+
+            <stop offset="0" style="stop-color:#66ccff;stop-opacity:0.1"/>
+            <stop offset="1" style="stop-color:#66ccff;stop-opacity:0.3"/>
 
         </linearGradient>
 
-        <rect x="-10" y="-10" height="620" width="3000" fill="url(#GradSky)" />
+        <linearGradient  id="gradRed" gradientUnits="userSpaceOnUse"
+            x1="0" y1="0" x2="0" y2="100">
 
-        <use xlink:href="#sun" transform="translate(800 100) scale(2.5)"/>
-
-        <use xlink:href="#k2" />
-
-        <linearGradient  id="gradAvalanche" gradientUnits="userSpaceOnUse"
-            x1="850" y1="110" x2="1100" y2="720">
-
-            <stop offset="0" style="stop-color:lavender"/>
-
-            <stop id="snow1" offset="0" style="stop-color:gainsboro"/>
-
-            <stop id="snow2" offset="0" style="stop-color:aliceblue"/>
+            <stop offset="0" style="stop-color:#ff8989"/>
+            <stop offset="0.7" style="stop-color:red"/>
+            <stop offset="1" style="stop-color:black"/>
 
         </linearGradient>
 
-        <path d="M675 190 L665 255 L660 315 L680 315 L730 420 L920 620 L920 620 L1200 620 L920 375 L816 300 L765 240 L730 230" fill="url(#gradAvalanche)" />
+        <linearGradient  id="gradYellow" gradientUnits="userSpaceOnUse"
+            x1="10" y1="50" x2="10" y2="120">
 
-        <linearGradient  id="gradFade" gradientUnits="userSpaceOnUse"
-            x1="1350" y1="300" x2="1600" y2="300">
-
-            <stop offset="0" style="stop-color:lavender;stop-opacity:0"/>
-
-            <stop offset="0.9" style="stop-color:honeydew;stop-opacity:1" />
+            <stop offset="0.6" style="stop-color:yellow"/>
+            <stop offset="1" style="stop-color:black"/>
 
         </linearGradient>
 
-        <use id="speechBubbleObj" xlink:href="#speechBubble" transform="translate(350 70)" visibility="hidden" />
+        <g id="rearRotor">
+            <polygon points="-5 -20 5 20 -5 20 5 -20" color="black">
+                <animateTransform begin="0" attributeName="transform" type="rotate" values="0; 360" dur="0.3s" repeatCount="indefinite"/>
+            </polygon>
+        </g>
 
-        <rect x="1350" y="0" width="250" height="600" fill="url(#gradFade)" />
+        <g id="topRotors">
+            <polygon fill="black" points="100 12 110 10 200 15 195 15 ">
+                <animate attributeName="points" dur="0.4s" values="100 12 110 10 200 15 195 15; 290 10 300 12 200 15 195 15; 100 12 110 10 200 15 195 15 " repeatCount="indefinite"/>
+            </polygon>
 
-        <use xlink:href="#closeUpBackground" transform="translate(1600, 0)" />
+            <polygon fill="black" points="290 15 300 17 200 20 195 20">
+                <animate begin="0.01" attributeName="points" dur="0.4s" values="290 10 300 12 200 15 195 15; 100 12 110 10 200 15 195 15; 290 10 300 12 200 15 195 15 " repeatCount="indefinite"/>
+            </polygon>
+        </g>
 
-        <animate begin="3s" attributeType= "XML" xlink:href="#speechBubbleObj" attributeName="visibility" from="hidden" to="visible" fill="freeze" dur="0.01s"/>
+        <g id="chopper">
 
-        <animate id="shake" attributeName="viewBox" dur="3s" begin="3s" values="0 0 900 600; -10 0 900 600; 0 -10 900 600;  0 0 900 600; 0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600; -10 0 900 600; 0 -10 900 600;  0 0 900 600;  0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600; -10 0 900 600; 0 -10 900 600;  0 0 900 600;  0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600; -10 0 900 600; 0 -10 900 600;  0 0 900 600;  0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600; 0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600; -10 0 900 600; 0 -10 900 600;  0 0 900 600;  0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600; -10 0 900 600; 0 -10 900 600;  0 0 900 600;  0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600; -10 0 900 600; 0 -10 900 600;  0 0 900 600;  0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600;" fill="freeze"/>
+            <use xlink:href="#rearRotor" transform="translate(63 38)"/>
+            <use xlink:href="#rearRotor" transform="translate(63 38)"/>
+            <rect fill="black" x="195" y="15" width="5" height="5" />
+            <use xlink:href="#topRotors" />
 
-        <animate begin="shake.end" attributeType= "XML" xlink:href="#speechBubbleObj" attributeName="visibility" from="visible" to="hidden" fill="freeze" dur="0.01s"/>
+            <!-- <path d="M 31 5 h 16 0 l 75 31" stroke="red" stroke-width="2" fill="none" /> -->
+            <path d="M 31 5 H 47 L 77 31 H 134 Q 182 15 230 22 Q 231 23 233 26 Q 252 29 257 37 L 266 38 L269 40 L225 40 L250 62 L300 62 L 304 65 V 72 Q 284 88 263 87 H 188 Q 172 83 136 43 H 77 L 73 55 H 59 Z" stroke-width="2" fill="url(#gradRed)" />
+            <path d="M 197 84 h 2 V 102 H 182 V 104 H 274 L 283 101 L 278 101 L 275 102 L 262 102 L 256 84 h 2 L 264 102 H 197" fill="url(#gradYellow)" />
+            <path d="M 185 40 h 7 v 10 h 10 v 7 h -10 v 10 h -7 v -10 h -10 v -7 h 10 v -10" fill="white" />
 
-        <animate id="panToAvalanche" attributeName="viewBox" dur="1.5s" begin="shake.end + 1s" values="0 0 900 600; 400 0 900 600;" fill="freeze"/>
+            <!-- JMV -->
 
-        <animate id="avalanche" begin="panToAvalanche.end" attributeType= "XML" xlink:href="#snow1" attributeName="offset" from="0" to="1" fill="freeze" dur="7s"/>
-        <animate attributeType="XML" begin="panToAvalanche.end" xlink:href="#snow2" attributeName="offset" from="0.1" to="1.1" fill="freeze" dur="7s"/>
-        <animate id="milkShake" attributeName="viewBox" dur="5s" begin="panToAvalanche.end" values="400 0 900 600; 395 0 900 600; 400 -5 900 600; 400 0 900 600; 400 5 900 600;  405 5 900 600;  405 0 900 600; 400 0 900 600; 395 0 900 600; 400 -5 900 600; 400 0 900 600; 400 5 900 600;  405 5 900 600;  405 0 900 600; 400 0 900 600; 395 0 900 600; 400 -5 900 600; 400 0 900 600; 400 5 900 600;  405 5 900 600;  405 0 900 600; 400 0 900 600; 395 0 900 600; 400 -5 900 600; 400 0 900 600; 400 5 900 600;  405 5 900 600;  405 0 900 600; 400 0 900 600; 400 5 900 600; 405 5 900 600;  405 0 900 600; 400 0 900 600; 395 0 900 600; 400 -5 900 600; 400 0 900 600; 400 5 900 600;  405 5 900 600;  405 0 900 600; 400 0 900 600; 395 0 900 600; 400 -5 900 600; 400 0 900 600; 400 5 900 600;  405 5 900 600;  405 0 900 600;  400 0 900 600; 395 0 900 600; 400 -5 900 600;  400 0 900 600;  400 5 900 600;  405 5 900 600;  405 0 900 600;  400 0 900 600;" fill="freeze"/>
+            <!-- windows -->
+            <path d="M 269 40 L300 62 L250 62 L225 40 Z " fill="url(#windowGrad)" />
 
-        <animate id="switchView" attributeName="viewBox" dur="0.3s" begin="avalanche.end + 0.5" values="400 0 900 600; 1600 0 900 600;" fill="freeze"/>
+        </g>
 
-        <!-- Close Up -->
+    </defs>
 
-        <path d="M 1600 0 Q 1850 400 2500 350 L 2500 600 L 1600 600 Z" fill="honeydew" />
+    <!--
 
-        <linearGradient  id="avalancheCloseUp" gradientUnits="userSpaceOnUse"
-            x1="1600" y1="0" x2="2450" y2="350">
 
-            <stop offset="0" style="stop-color:white"/>
-            <stop id="snowEdge" offset="0" style="stop-color:white"/>
-            <stop id="snowFade" offset="0.1" style="stop-color:white;stop-opacity:0"/>
+    DRAWING
 
-        </linearGradient>
 
-        <path d="M 1600 0 L 1615 0 Q 1900 395 2400 300 L 2520 600 L 1600 600 Z" fill="url(#avalancheCloseUp)" />
+-->
 
-        <path id="snowRoll" d="M 0 0 Q 30 0 30 30 L -50 600 L -60 600 Z" fill="white" visibility="hidden">
-            <animateMotion path="M 1614 0 Q 1900 395 2400 300" begin="switchView.end" dur="1.93s" rotate="auto" />
-        </path>
+<linearGradient  id="GradSky" gradientUnits="userSpaceOnUse"
+    x1="450" y1="0" x2="450" y2="600">
 
-        <use xlink:href="#tree" transform="translate(2450, 70) scale(3)" />
-        <use xlink:href="#tree" transform="translate(2370, 80) scale(3.5)" />
-        <use xlink:href="#tree" transform="translate(2400, 100) scale(4.0)" />
-        <use xlink:href="#tree" transform="translate(2330, 90) scale(3.5)" />
-        <use xlink:href="#tree" transform="translate(2500, 90) scale(3.8)" />
-        <use xlink:href="#tree" transform="translate(2290, 105) scale(4.3)" />
-        <use xlink:href="#tree" transform="translate(2450, 110) scale(5)" />
-        <use id="treeShake" xlink:href="#tree" transform="translate(2370, 120) scale(5.5)" additive="sum" />
-        <use xlink:href="#tree" transform="translate(2460, 135) scale(6)" />
+    <stop offset="0" style="stop-color:midnightblue"/>
 
-        <animate begin="switchView.end" attributeType= "XML" xlink:href="#snowRoll" attributeName="visibility" from="hidden" to="visible" fill="freeze" dur="0.01s"/>
-        <animate begin="switchView.end" attributeType= "XML" xlink:href="#snowEdge" attributeName="offset" from="0" to="0.99" fill="freeze" dur="2s"/>
-        <animate begin="switchView.end" attributeType= "XML" xlink:href="#snowFade" attributeName="offset" from="0.01" to="1" fill="freeze" dur="2s"/>
-        <animate id="avaClose" begin="switchView.end" attributeType= "XML" xlink:href="#avalancheCloseUp" attributeName="y2" from="350" to="0" fill="freeze" dur="2s"/>
+    <stop offset="0.2" style="stop-color:royalblue"/>
 
-        <use id="m1" xlink:href="#mpbhSnowball" transform="translate(-100 0) scale(0.7)"/>
-        <animateTransform begin="avaClose.end" xlink:href="#m1" attributeName="transform" attributeType="XML" type="rotate" values="0; 360" dur="1s" end="mpbhTumble.end" repeatCount="indefinite" additive="sum"/>
-        <animateMotion id="mpbhTumble" begin="avaClose.end" xlink:href="#m1" path="M 1600 0 Q 1800 395 2420 500" dur="5s" fill="freeze"/>
+    <stop offset="0.65" style="stop-color:lightskyblue"/>
 
-    </svg>
+</linearGradient>
+
+<rect x="-10" y="-10" height="620" width="3000" fill="url(#GradSky)" />
+
+<use id="sunObj" xlink:href="#sun" transform="translate(800 100)"/>
+
+<use id="showMeObj" xlink:href="#showMe" />
+
+<use id="showMeMouthObj" xlink:href="#showMeMouth" transform="translate(195 110) scale(0.7)" visibility="hidden"/>
+
+<use xlink:href="#k2" />
+
+<linearGradient  id="gradAvalanche" gradientUnits="userSpaceOnUse"
+    x1="850" y1="110" x2="1100" y2="720">
+
+    <stop offset="0" style="stop-color:lavender"/>
+
+    <stop id="snow1" offset="0" style="stop-color:gainsboro"/>
+
+    <stop id="snow2" offset="0" style="stop-color:aliceblue"/>
+
+</linearGradient>
+
+<path d="M675 190 L665 255 L660 315 L680 315 L730 420 L920 620 L920 620 L1200 620 L920 375 L816 300 L765 240 L730 230" fill="url(#gradAvalanche)" />
+
+<linearGradient  id="gradFade" gradientUnits="userSpaceOnUse"
+    x1="1350" y1="300" x2="1600" y2="300">
+
+    <stop offset="0" style="stop-color:lavender;stop-opacity:0"/>
+
+    <stop offset="0.9" style="stop-color:honeydew;stop-opacity:1" />
+
+</linearGradient>
+
+<rect x="1350" y="0" width="250" height="600" fill="url(#gradFade)" />
+
+<use xlink:href="#closeUpBackground" transform="translate(1600, 0)" />
+
+<!-- Close Up -->
+
+<path d="M 1600 0 Q 1850 400 2500 350 L 2500 600 L 1600 600 Z" fill="honeydew" />
+
+<linearGradient  id="avalancheCloseUp" gradientUnits="userSpaceOnUse"
+    x1="1600" y1="0" x2="2450" y2="350">
+
+    <stop offset="0" style="stop-color:white"/>
+    <stop id="snowEdge" offset="0" style="stop-color:white"/>
+    <stop id="snowFade" offset="0.1" style="stop-color:white;stop-opacity:0"/>
+
+</linearGradient>
+
+<path d="M 1600 0 L 1615 0 Q 1900 395 2400 300 L 2520 600 L 1600 600 Z" fill="url(#avalancheCloseUp)" />
+
+<path id="snowRoll" d="M 0 0 Q 30 0 30 30 L -50 600 L -60 600 Z" fill="white" visibility="hidden">
+    <animateMotion path="M 1614 0 Q 1900 395 2400 300" begin="switchView.end" dur="1.93s" rotate="auto" />
+</path>
+
+<use xlink:href="#tree" transform="translate(2450, 70) scale(3)" />
+<use xlink:href="#tree" transform="translate(2370, 80) scale(3.5)" />
+<use xlink:href="#tree" transform="translate(2400, 100) scale(4.0)" />
+<use xlink:href="#tree" transform="translate(2330, 90) scale(3.5)" />
+<use xlink:href="#tree" transform="translate(2500, 90) scale(3.8)" />
+<use xlink:href="#tree" transform="translate(2290, 105) scale(4.3)" />
+<use xlink:href="#tree" transform="translate(2450, 110) scale(5)" />
+<use id="treeShake" xlink:href="#tree" transform="translate(2370, 120) scale(5.5)" additive="sum" />
+<use xlink:href="#tree" transform="translate(2460, 135) scale(6)" />
+
+<use id="m1" xlink:href="#mpbhSnowball" transform="translate(-100 0) scale(0.7)"/>
+
+
+<!-- Speech Bubble and text always on top, should stay at the end of drawing -->
+
+
+<use id="speechBubbleObj" xlink:href="#speechBubble" transform="translate(400 70)" visibility="hidden" />
+<text id="textShowMe1" x="400" y="60" text-anchor="middle" visibility="hidden" font-size="25" font-weight="bolder" font-family="calibri">
+    <tspan>SHOW ME</tspan>
+    <tspan x="400" y="85">WHAT YOU GOT</tspan>
+</text>
+<!--<text id="textShowMe2" x="350" y="80" text-anchor="middle" visibility="hidden" font-size="15">WHAT YOU GOT</text>-->
+<text id="textMpbh1" x="2200" y="340" text-anchor="middle" visibility="hidden" font-size="20" font-weight="bolder" font-family="calibri">
+    <tspan>Oooh weee</tspan>
+    <tspan x="2200" y="360">It feels like all my</tspan>
+    <tspan x="2200" y="380">bones are broken into</tspan>
+    <tspan x="2200" y="400">a million pieces</tspan>
+</text>
+
+
+<!--
+
+
+ANIMATIONS
+
+
+-->
+<animateTransform id="showMeMove" xlink:href="#showMeObj" attributeName="transform" type="scale" from="0.3" to="0.5" dur="5s" fill="freeze" additive="sum"/>
+<animateTransform id="showMeMove" xlink:href="#showMeObj" attributeName="transform" type="translate" from="-180 300" to="140 -90" dur="5s" fill="freeze" additive="sum"/>
+
+<animate begin="showMeMove.end + 1" attributeType= "XML" xlink:href="#showMeMouthObj" attributeName="visibility" from="hidden" to="visible" fill="freeze" dur="0.01s"/>
+<animate begin="showMeMove.end + 1" attributeType= "XML" xlink:href="#speechBubbleObj" attributeName="visibility" from="hidden" to="visible" fill="freeze" dur="0.01s"/>
+<animate begin="showMeMove.end + 1" attributeType= "XML" xlink:href="#textShowMe1" attributeName="visibility" from="hidden" to="visible" fill="freeze" dur="0.01s"/>
+<animate begin="showMeMove.end + 1" attributeType= "XML" xlink:href="#textShowMe2" attributeName="visibility" from="hidden" to="visible" fill="freeze" dur="0.01s"/>
+
+<animate id="shake" attributeName="viewBox" dur="3s" begin="showMeMove.end + 1" values="0 0 900 600; -10 0 900 600; 0 -10 900 600;  0 0 900 600; 0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600; -10 0 900 600; 0 -10 900 600;  0 0 900 600;  0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600; -10 0 900 600; 0 -10 900 600;  0 0 900 600;  0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600; -10 0 900 600; 0 -10 900 600;  0 0 900 600;  0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600; 0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600; -10 0 900 600; 0 -10 900 600;  0 0 900 600;  0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600; -10 0 900 600; 0 -10 900 600;  0 0 900 600;  0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600; -10 0 900 600; 0 -10 900 600;  0 0 900 600;  0 10 900 600;  10 10 900 600;  10 0 900 600;  0 0 900 600;" fill="freeze"/>
+
+<animate begin="shake.end" attributeType= "XML" xlink:href="#showMeMouthObj" attributeName="visibility" from="visible" to="hidden" fill="freeze" dur="0.01s"/>
+<animate begin="shake.end" attributeType= "XML" xlink:href="#speechBubbleObj" attributeName="visibility" from="visible" to="hidden" fill="freeze" dur="0.01s"/>
+<animate begin="shake.end" attributeType= "XML" xlink:href="#textShowMe1" attributeName="visibility" from="visible" to="hidden" fill="freeze" dur="0.01s"/>
+<animate begin="shake.end" attributeType= "XML" xlink:href="#textShowMe2" attributeName="visibility" from="visible" to="hidden" fill="freeze" dur="0.01s"/>
+
+<animate id="panToAvalanche" attributeName="viewBox" dur="1.5s" begin="shake.end + 1s" values="0 0 900 600; 400 0 900 600;" fill="freeze"/>
+<animateTransform id="panToAvalancheSun" xlink:href="#sunObj" attributeName="transform" attributeType="XML" type="translate" dur="1.5s" begin="shake.end + 1s" from="0 0" to="100 0" fill="freeze" additive="sum"/>
+
+<animate id="avalanche" begin="panToAvalanche.end" attributeType= "XML" xlink:href="#snow1" attributeName="offset" from="0" to="1" fill="freeze" dur="7s"/>
+<animate attributeType="XML" begin="panToAvalanche.end" xlink:href="#snow2" attributeName="offset" from="0.1" to="1.1" fill="freeze" dur="7s"/>
+<animate id="milkShake" attributeName="viewBox" dur="5s" begin="panToAvalanche.end" values="400 0 900 600; 395 0 900 600; 400 -5 900 600; 400 0 900 600; 400 5 900 600;  405 5 900 600;  405 0 900 600; 400 0 900 600; 395 0 900 600; 400 -5 900 600; 400 0 900 600; 400 5 900 600;  405 5 900 600;  405 0 900 600; 400 0 900 600; 395 0 900 600; 400 -5 900 600; 400 0 900 600; 400 5 900 600;  405 5 900 600;  405 0 900 600; 400 0 900 600; 395 0 900 600; 400 -5 900 600; 400 0 900 600; 400 5 900 600;  405 5 900 600;  405 0 900 600; 400 0 900 600; 400 5 900 600; 405 5 900 600;  405 0 900 600; 400 0 900 600; 395 0 900 600; 400 -5 900 600; 400 0 900 600; 400 5 900 600;  405 5 900 600;  405 0 900 600; 400 0 900 600; 395 0 900 600; 400 -5 900 600; 400 0 900 600; 400 5 900 600;  405 5 900 600;  405 0 900 600;  400 0 900 600; 395 0 900 600; 400 -5 900 600;  400 0 900 600;  400 5 900 600;  405 5 900 600;  405 0 900 600;  400 0 900 600;" fill="freeze"/>
+
+<animate id="switchView" attributeName="viewBox" dur="0.3s" begin="avalanche.end + 0.5" values="400 0 900 600; 1600 0 900 600;" fill="freeze"/>
+
+<animate begin="switchView.end" attributeType= "XML" xlink:href="#snowRoll" attributeName="visibility" from="hidden" to="visible" fill="freeze" dur="0.01s"/>
+<animate begin="switchView.end" attributeType= "XML" xlink:href="#snowEdge" attributeName="offset" from="0" to="0.99" fill="freeze" dur="2s"/>
+<animate begin="switchView.end" attributeType= "XML" xlink:href="#snowFade" attributeName="offset" from="0.01" to="1" fill="freeze" dur="2s"/>
+<animate id="avaClose" begin="switchView.end" attributeType= "XML" xlink:href="#avalancheCloseUp" attributeName="y2" from="350" to="0" fill="freeze" dur="2s"/>
+
+
+<animateTransform begin="avaClose.end" xlink:href="#m1" attributeName="transform" attributeType="XML" type="rotate" values="0; 360" dur="1s" end="mpbhTumble.end" repeatCount="indefinite" additive="sum"/>
+<animateMotion id="mpbhTumble" begin="avaClose.end" xlink:href="#m1" path="M 1600 0 Q 1800 395 2420 500" dur="5s" fill="freeze"/>
+
+<animate begin="mpbhTumble.end" attributeType= "XML" xlink:href="#speechBubbleObj" attributeName="visibility" from="hidden" to="visible" fill="freeze" dur="0.01s"/>
+<animate begin="mpbhTumble.end" attributeType= "XML" xlink:href="#textMpbh1" attributeName="visibility" from="hidden" to="visible" fill="freeze" dur="0.01s"/>
+<animateTransform begin="mpbhTumble.end" attributeType= "XML" xlink:href="#speechBubbleObj" attributeName="transform" type="translate" from="0 0" to="2200 370" fill="freeze" dur="0.01s" />
+<animateTransform begin="mpbhTumble.end" attributeType= "XML" xlink:href="#speechBubbleObj" attributeName="transform" type="scale" from="1 1" to="-1 1" fill="freeze" dur="0.01s" additive="sum"/>
+
+
+</svg>
